@@ -1,21 +1,29 @@
-package com.program;
+package programs;
 
 public class PalindromeNumber {
-    public static void main(String[] args) {
-        int number = 12321;
-        int original = number;
-        int reversed = 0;
 
-        while (number != 0) {
-            int digit = number % 10;
-            reversed = reversed * 10 + digit;
-            number = number / 10;
-        }
+	public static void main(String[] args) {
+		
+		int num = 12321;
+		int original = num;
+		int reversed = 0;
+		
+		while(num !=0) {
+			
+			int digit = num % 10;
+			reversed = reversed * 10 + digit;
+			num = num/10;
+		}
+		
+		if (original == reversed) {
+			
+			System.out.println(original +":" +"is palindrome" );
+		}else {
+		System.out.println("not palindrome");
+		}
+		
+		
+		
+	}
 
-        if (original == reversed) {
-            System.out.println(original + " is a palindrome number.");
-        } else {
-            System.out.println(original + " is not a palindrome number.");
-        }
-    }
 }

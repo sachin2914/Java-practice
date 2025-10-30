@@ -1,23 +1,29 @@
-package com.program;
+package programs;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class OccurrenceOfCharacter {
-    public static void main(String[] args) {
-        String input = "programming";
-        Map<Character, Integer> charCountMap = new HashMap<>();
 
-        for (char ch : input.toCharArray()) {
-            if (charCountMap.containsKey(ch)) {
-                charCountMap.put(ch, charCountMap.get(ch) + 1);
-            } else {
-                charCountMap.put(ch, 1);
-            }
-        }
+	public static void main(String[] args) {
+	
+		String input = "aabbbccddde";
+		
+		HashMap<Character , Integer > hmap = new HashMap<>();
+		
+		for(char ch :input.toCharArray()) {
+			
+			if(hmap.containsKey(ch)) {
+				
+				hmap.put(ch, hmap.get(ch) + 1);
+			} else {
+				hmap.put(ch, 1);
+			}
+		}
+		
+      for(Map.Entry<Character, Integer> entry:hmap.entrySet()) {
+    	  System.out.println(entry.getKey() + ":" + entry.getValue());
+      }
+	}
 
-        // Print the character counts
-        for (Map.Entry<Character, Integer> entry : charCountMap.entrySet()) {
-            System.out.println(entry.getKey() + " : " + entry.getValue());
-        }
-    }
 }

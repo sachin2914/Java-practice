@@ -1,22 +1,21 @@
-package com.program;
+package programs;
 
 public class ReverseString {
 
 	public static void main(String[] args) {
 		
-		String s = "sachin gurav";
+		String string = "sachin";
+		
 		String str = "";
-		char ch = 0 ;
+		char ch = 0;
 		
-		for(int i=0; i < s.length(); i++) {
+		for(int i = 0 ; i<string.length() ; i++) {
 			
-			 ch = s.charAt(i);
-			
-			 str = ch+ str;
-		
+			ch = string.charAt(i);
+			str = ch + str;
 		}
+		
 		 System.out.println("ReverseString : " + str);
 	}
-    
-	 
+
 }

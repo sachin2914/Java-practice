@@ -1,4 +1,4 @@
-package com.program;
+package programs;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -19,16 +19,15 @@ public class DuplicateString {
 	                .collect(Collectors.toSet());
 
 	        System.out.println("Duplicates: " + duplicates);
-	        
-	        // 2nd way
-	        List<String> uniqueList = list.stream()
-	                .distinct()
-	                .collect(Collectors.toList());
-
-	        System.out.println("Original List: " + list);
-	        System.out.println("List after removing duplicates: " + uniqueList);
-	        
-	    }
+	    
 	
+	List<String> uniqueList = list.stream()
+            .distinct()
+            .collect(Collectors.toList());
+
+    System.out.println("Original List: " + list);
+    System.out.println("List after removing duplicates: " + uniqueList);
+    
+	}
 
 }
